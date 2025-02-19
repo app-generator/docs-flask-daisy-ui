@@ -1,9 +1,11 @@
 from flask import Flask, send_from_directory
+from flask import render_template, request, redirect, url_for
 from flask_cors import CORS
-import os
+from datetime import datetime
 
 app = Flask(__name__)
 CORS(app)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/api/hello')
 def hello():
@@ -11,12 +13,13 @@ def hello():
 
 # Serve frontend in production
 @app.route('/')
-def serve_frontend():
-    return send_from_directory('frontend/dist', 'index.html')
+def index():
 
-@app.route('/<path:path>')
-def serve_static(path):
-    return send_from_directory('frontend/dist', path)
+    context = {
+        'timestamp': datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
+    }
+    
+    return render_template('index.html', **context)
 
 if __name__ == '__main__':
     app.run(debug=True)

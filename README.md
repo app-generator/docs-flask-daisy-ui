@@ -1,45 +1,62 @@
-# Flask + DaisyUI + Vite Starter
+# [Flask & DaisyUI/Tailwind](https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html) `Starter`
 
-A minimal starter template integrating Flask backend with DaisyUI components and Vite frontend tooling.
+Minimal [Flask starter that uses DaisyUI/Tailwind](https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html) for styling and Vite as builder tool.
 
-## Setup
+- Support: https://app-generator.dev/
+- [Flask & DaisyUI/Tailwind](https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html) - Integration Guide
 
-1. Install backend dependencies:
+<br /> 
+
+![Flask & DaisyUI/Tailwind - Thumb Image](https://github.com/user-attachments/assets/ea55908f-8b1e-4abd-9e88-0443bbeb67ba)
+
+<br />
+
+## Deploy on `Render` (free plan)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+<br /> 
+
+## Manual Build 
+
+> 👉 Download the code  
+
 ```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+$ git clone https://github.com/app-generator/docs-flask-daisy-ui.git
+$ cd docs-flask-daisy-ui
 ```
 
-2. Install frontend dependencies:
+<br />
+
+> 👉 Install modules via `VENV`  
+
 ```bash
-cd frontend
-npm install
+$ virtualenv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
 ```
 
-## Development
+<br />
 
-1. Start the Flask backend:
+> 👉 Compile DaisyUI/Tailwind
+
 ```bash
-cd backend
-flask run
+$ yarn 
+$ yarn dev     # development
+$ yarn build   # production
 ```
 
-2. Start the Vite dev server:
+<br />
+
+> 👉 Start the app
+
 ```bash
-cd frontend
-npm run dev
+$ flask run
 ```
 
-3. Visit http://localhost:5173 to see your app
+At this point, the app runs at `http://127.0.0.1:5000/`. 
 
-## Production Build
+<br />
 
-1. Build the frontend:
-```bash
-cd frontend
-npm run build
-```
-
-2. The Flask app will serve the built frontend from the dist directory
+---
+[Flask & DaisyUI/Tailwind](https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html)- Minimal **Django** core provided by **[App-Generaror](https://app-generator.dev/)**

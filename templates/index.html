@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask + DaisyUI + Vite</title>
+
+  <meta name="description" content="Integrate DaisyUI with Flask - The integration steps and Coding Sample">
+
+  <link rel="canonical" href="https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html">
+
+  <link href="{{ url_for('static', filename='dist/assets/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content text-center">
+              <div class="max-w-xl">
+                <h1 class="text-5xl font-bold">
+                  <u>
+                    <a href="https://app-generator.dev/docs/technologies/flask/integrate-daisyui.html">Flask + DaisyUI + Vite</a>
+                  </u>
+                </h1> 
+                <p class="py-6">{{ timestamp }}</p>
+                <p class="py-6">Minimal starter template with Flask backend, DaisyUI components, and Vite for rapid development.</p>
+                <button class="btn btn-primary" id="testApi">Test API</button>
+                <p id="apiResponse" class="mt-4"></p>
+              </div>
+            </div>
+        </div>
+        <div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="https://v3.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>      
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='dist/assets/main.js') }}"></script>
+</body>
+</html>
